@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Coogle-More</title>
+    <link rel="shortcut icon" type="image/x-icon" href="%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleinfo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4bea434f10.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4bea434f10.js" crossorigin="anonymous"></script>
+	<script>var pc_device = "win16|win32|win64|mac|macintel";
+
+    // 접속한 디바이스 환경
+    var this_device = navigator.platform;
+
+    if ( this_device ) {
+
+        if ( pc_device.indexOf(navigator.platform.toLowerCase()) < 0 ) {
+            console.log('MOBILE');
+			window.location.href = "https://coshaman.github.io/Cooglemobile/index.html";
+        } else {
+            console.log('PC');
+        }
+
+	}</script>
+    <style type="text/css"> .no-drag {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}.btn2{padding:0;background:transparent;border:0;outline:0}
+
+.accordion_area{width:40%;margin:20px auto;border:1px solid #000}
+.accordion_area .btn_toggle{display:block;width:100%;height:auto;padding:0 10px;background:#fff;font-size:20px;text-align:left;line-height:30px;box-sizing:border-box;font-weight: bold;}
+.accordion_area .btn_toggle::before{display:inline;content:''}
+.accordion_area .content_area{display:none;padding:10px;background:#f4f4ff}
+.accordion_area .content_area::before{display:inlnie;content:''}
+.accordion_area .content_area.act{display:block}
+	.accordion_area .btn_toggle { animation-duration: 3s; animation-name: rainbowLink; animation-iteration-count: infinite; }
+	@keyframes rainbowLink {
+	 0% { color: rgb(228, 65, 52, 1); }
+	 20% { color: rgb(244, 183, 5, 1); }
+	 40% { color: rgb(64, 129, 237, 1); }
+	 60% { color: rgb(51, 163, 81, 1);}
+	 80% { color: rgb(228, 65, 52, 1); }
+	 100% { color: rgb(64, 129, 237, 1);}
+	}
+		#aa:hover {animation-duration: 3s; animation-name: rainbowLink; animation-iteration-count: infinite;}
+		body {
+			text-align: center;
+		}
+		#aa:focus{color: skyblue}
+	</style>
+</head>
+<body onload="init()">
+  <ul>
+    <li><a href="moa.html" style="text-decoration:none">Search</a></li>
+   <li><a class="active" href="info.html" style="text-decoration:none">+More</a></li>
+ </ul>
+    <!--<h1 class="no-drag"><span>C</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></h1>-->
+    <!--<img class="no-drag" src="%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png" height="60px" width="60px" style="margin: auto;margin-top: 9.5%">-->
+   	<span style="font-size: 30px"><h1 id="show" class="no-drag"></h1></span>
+        <script>
+            function d_clock() {
+                var d_t = new Date();
+                var month = d_t.getMonth();
+                var date = d_t.getDate();
+                var day = d_t.getDay();
+                var week = ["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+                var hours = d_t.getHours();
+                var minutes = d_t.getMinutes();
+                var seconds = d_t.getSeconds();
+                document.getElementById("show").innerHTML = "<span>" + (month + 1) + "</span>/<span>"+date+"</span><span> " + week[day]+"</span><span> " + hours+"</span>:<span>"+minutes+"</span>:<span>"+seconds+"</span>";
+            }
+            d_clock();
+            setInterval(d_clock, 1000);
+    </script>
+    <!--<div class="alert alert-primary" role="alert" style="text-align: center">
+      Poogle은 Pollymath + Google로 다수 검색 포털을 연결한 웹앱입니다.
+    </div>
+    <div class="alert alert-secondary" role="alert" style="text-align: center">
+        개발자 정보 : 집돌이 페렐만 <br>개발자 홈페이지가 곧 오픈됩니다.
+    </div>
+    <div class="alert alert-success" role="alert" style="text-align: center">
+      문의는 kmcha72@gmail.com을 이용해주세요!
+    </div>-->
+
+    <div class="accordion_area">
+  <button class="btn btn_toggle">Coogle</button>
+  <div class="content_area">
+    Coogle은 Coshaman + Google로 다수 검색 포털을 연결한 사이트 입니다.
+  </div>
+</div>
+
+<div class="accordion_area">
+  <button class="btn btn_toggle">정보</button>
+  <div class="content_area">
+	  개발자 : 박성현<br>개발자 포트폴리오 : <a target="_blank" id = "aa" href="https://coshaman.github.io/portfolio/index.html" style="text-decoration:none">www.박성현.홈페이지.한국(클릭)</a><br>버전 : v 2.5<a target="_blank" id = "aa" href="https://coshaman.github.io/Poogle/index.html" style="text-decoration:none">(이전버전 poogle을 찾으시나요?)</a>
+  </div>
+</div>
+<div style="height: 25px;"></div>
+<div class="accordion_area">
+  <button class="btn btn_toggle">동아사이언스</button>
+  <div class="content_area">
+    <a href="polymath.html" style="text-decoration:none" id = "aa">폴리매스</a><br><a id = "aa" href="http://kids.dongascience.com/" style="text-decoration:none">어린이과학동아</a><br><a id = "aa" href="http://dongascience.donga.com/" style="text-decoration:none">과학동아</a>
+  </div>
+</div>
+
+<div class="accordion_area">
+  <button class="btn btn_toggle">실험실</button>
+  <div class="content_area">
+    구글, 네이버, 다음 다 모였다!<br>세 가지 검색엔진의 결과를 모두 출력하는 <a href="allsearch.html" style="text-decoration:none" id = "aa">쿠글 올 서치<sup>veta</sup></a><br>
+    네이트와 빙을 같이 볼 수 있는 <a id = "aa" href="test.html" style="text-decoration:none">쿠글 듀얼<sup>veta</sup></a><br>
+    컴퓨터 사용도 쿠글로 절제 있게! <a id = "aa" href="gettime.html" style="text-decoration:none">쿠글 타이머<sup>veta</sup></a>
+  </div>
+</div>
+
+ <div class="accordion_area">
+  <button class="btn btn_toggle">더 많은 검색엔진!</button>
+  <div class="content_area">
+    ver 3.0 업데이트에 추가 검색엔진과 더 많은 기능이 추가된답니다!(기대하시라~)
+  </div>
+</div>
+<!--스크래치 폴리매스 책 영화 사전 등등-->
+ <div class="accordion_area">
+  <button class="btn btn_toggle">패밀리 사이트</button>
+  <div class="content_area">
+    <a target="_blank" href="https://coshaman.github.io/coshaman1/nametest" style="text-decoration:none" id = "aa">닉궁</a><br>
+    <a target="_blank" id = "aa" href="https://coshaman.github.io/portfolio/index.html" style="text-decoration:none">박성현 홈페이지</a>
+  </div>
+</div>
+
+
+<div style="height: 25px;"></div>
+   <div class="accordion_area">
+  <button class="btn btn_toggle">문의</button>
+  <div class="content_area">
+	  개발자 포트폴리오 : <a target="_blank" id = "aa" href="https://coshaman.github.io/portfolio/index.html" style="text-decoration:none">www.박성현.홈페이지.한국(클릭)</a><br>문의 이메일 : <a href="mailto:kmcha72@gmail.com" id="aa" style="text-decoration:none">kmcha72@gmail.com</a><br>
+	  <a target="_blank" id = "aa" href="https://docs.google.com/forms/d/e/1FAIpQLScYMZ8GvajK9HSEX2qnZ4hJpK99jHFBNvGtCb_uOyQy_hDDTw/viewform" style="text-decoration:none">종합 문의</a>
+  </div>
+</div>
+<div style="height: 25px;"></div>
+    <div style="position: fixed; bottom: 15px; right: 15px">
+    	<input type="button" class="btn btn-outline-info" onclick="back()" id = 'night_day' value = '배경 On'>
+    </div>
+<script>
+	function bindingAccordionEvent(wrap){
+  let areaArr = document.querySelectorAll(wrap);
+
+  areaArr.forEach(function(area){
+     let hasGroup = area.dataset['group'] !== undefined ? true : false;
+    let btn = area.querySelector('.btn_toggle');
+
+    btn.addEventListener('click', function(){
+      if(hasGroup === true){
+        let name = area.dataset['group'];
+        let groupArr = document.querySelectorAll(wrap + '[data-group="'+ name +'"]');
+        let thisContent = area.querySelector('.content_area');
+
+        groupArr.forEach(function(group){
+           let content = group.querySelector('.content_area');
+          content.classList.remove('act');
+        });
+        thisContent.classList.add('act');
+      }else{
+        let content = area.querySelector('.content_area');
+        content.classList.toggle('act');
+      }
+    });
+  });
+}
+
+bindingAccordionEvent('.accordion_area');
+
+
+	function back() {
+		if(document.querySelector('#night_day').value ==='night'){
+			document.querySelector('body').style.backgroundColor ='black';
+			document.querySelector('#night_day').value ='blue';
+			localStorage.Theme = "night";
+		  } else if(document.querySelector('#night_day').value ==='day') {
+			document.querySelector('body').style.backgroundColor ='white';
+			document.querySelector('#night_day').value ='night';
+			  localStorage.Theme = "day";
+		  } else if(document.querySelector('#night_day').value ==='배경 On'){
+			document.querySelector('body').style.backgroundColor ='black';
+			document.querySelector('#night_day').value ='blue';
+			localStorage.Theme = "night";
+		  }
+		 else {
+			document.querySelector('body').style.backgroundColor ='#81F7F3';
+			 localStorage.Theme = "blue";
+			document.querySelector('#night_day').value ='day';
+		  }
+	}
+	function init() {
+
+		var val = localStorage.Theme;
+		if(val ==='night'){
+			document.querySelector('body').style.backgroundColor ='black';
+			document.querySelector('#night_day').value ='blue';
+
+		  } else if(val ==='day') {
+			document.querySelector('body').style.backgroundColor ='white';
+			document.querySelector('#night_day').value ='배경 On';
+
+		  }
+		 else {
+			document.querySelector('body').style.backgroundColor ='#81F7F3';
+			document.querySelector('#night_day').value ='day';
+
+		  }
+	}
+</script>
+</body>
+</html>

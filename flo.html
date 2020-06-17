@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Clo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4bea434f10.js" crossorigin="anonymous"></script>
+    <style type="text/css"> .no-drag {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;} .accordion_area{width:50%;margin:20px auto;border:1px solid #000}
+.accordion_area .btn_toggle{display:block;width:100%;height:auto;padding:0 10px;background:#fff;font-size:15px;text-align:center;line-height:30px;box-sizing:border-box;font-weight: bold;}
+.accordion_area .btn_toggle::before{display:inline;content:''}
+.accordion_area .content_area{display:none;padding:10px;background:#f4f4ff}
+.accordion_area .content_area::before{display:inlnie;content:''}
+.accordion_area .content_area.act{display:block}</style>
+	<script>var pc_device = "win16|win32|win64|mac|macintel";
+
+    // 접속한 디바이스 환경
+    var this_device = navigator.platform;
+
+    if ( this_device ) {
+
+        if ( pc_device.indexOf(navigator.platform.toLowerCase()) < 0 ) {
+            console.log('MOBILE');
+			window.location.href = "https://coshaman.github.io/Cooglemobile/index.html";
+        } else {
+            console.log('PC');
+        }
+
+	}</script>
+
+</head>
+<body style="text-align: center;" onload="init()">
+  <ul>
+    <li><a href="moa.html" style="text-decoration:none">Search</a></li>
+   <li><a href="info.html" style="text-decoration:none">+More</a></li>
+   <li><a class="active" href="#" style="text-decoration: none;">Music</a></li>
+ </ul>
+
+	<h1 class="no-drag"><a href="https://www.music-flo.com/" style="text-decoration: none;"><span style="color: rgb(61, 61, 248);">Clo</span></a></h1>
+    <form action="https://www.music-flo.com/search/all?keyword=" method="get">
+        <div class="mx-auto search-bar input-group mb-3 rounded-pill" style="width: 58vw;">
+            <input name="q" type="text" class="form-control" placeholder="음악을 검색하세요" aria-label="음악을 검색하세요" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <!--<button type="button" id="" class="btn btnEvent"><img src="search.png" alt="btnImages" class="btnImages" width="30px" height="30px">
+                </button>-->
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </form>
+    <div class="accordion_area">
+		<button class="btn btn_toggle">다른 음원 스트리밍 서비스를 이용하시나요?</button>
+		<div class="content_area">
+			<h3 style="font-size: 20px; color: darkblue;"><a style="text-decoration: none;color: darkblue;" href="melon.html" id="don">Melon(멜론)을 사용 중이신가요? 여기를 클릭해주세요!</a></h3>
+   		<h3 style="font-size: 20px; color: darkblue;"><a style="text-decoration: none;color: darkblue;" href="vibe.html" id="don">VIBE(바이브)를 사용하시나요? 여기를 클릭해주세요!</a></h3>
+    		<p style="font-size: 20px; color: coral;">스포티파이를 사용 중이신가요? 아쉽게도 스포티파이는 아직 지원이 안되요..ㅜㅜ</p>
+		</div>
+	</div>
+    <div style="position: fixed; bottom: 15px; right: 15px">
+    	<input type="button" class="btn btn-outline-info" onclick="back()" id = 'night_day' value = '배경 On'>
+    </div>
+
+    <!--<form action="https://www.google.com/search?q=" method="get">
+        <div class="mx-auto search-bar input-group rounded-pill">
+          <input name="q" type="text" class="form-control" placeholder="검색어를 입력하세요" aria-label="검색어를 입력하세요" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div role="separator" class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+        </div>
+    </form>-->
+    <script>
+		function bindingAccordionEvent(wrap){
+		  let areaArr = document.querySelectorAll(wrap);
+
+		  areaArr.forEach(function(area){
+			 let hasGroup = area.dataset['group'] !== undefined ? true : false;
+			let btn = area.querySelector('.btn_toggle');
+
+			btn.addEventListener('click', function(){
+			  if(hasGroup === true){
+				let name = area.dataset['group'];
+				let groupArr = document.querySelectorAll(wrap + '[data-group="'+ name +'"]');
+				let thisContent = area.querySelector('.content_area');
+
+				groupArr.forEach(function(group){
+				   let content = group.querySelector('.content_area');
+				  content.classList.remove('act');
+				});
+				thisContent.classList.add('act');
+			  }else{
+				let content = area.querySelector('.content_area');
+				content.classList.toggle('act');
+			  }
+			});
+		  });
+		}
+
+	bindingAccordionEvent('.accordion_area');
+		function back() {
+		if(document.querySelector('#night_day').value ==='night'){
+			document.querySelector('body').style.backgroundColor ='black';
+			document.querySelector('body').style.color ='white';
+			document.querySelector('#night_day').value ='blue';
+			localStorage.Theme = "night";
+		  } else if(document.querySelector('#night_day').value ==='day') {
+			document.querySelector('body').style.backgroundColor ='white';
+			document.querySelector('body').style.color ='black';
+			document.querySelector('#night_day').value ='night';
+			  localStorage.Theme = "day";
+		  } else if(document.querySelector('#night_day').value ==='배경 On'){
+			document.querySelector('body').style.backgroundColor ='black';
+			document.querySelector('body').style.color ='white';
+			document.querySelector('#night_day').value ='blue';
+			localStorage.Theme = "night";
+		  }
+		 else {
+			document.querySelector('body').style.backgroundColor ='#81F7F3';
+			 localStorage.Theme = "blue";
+			document.querySelector('body').style.color ='#2EFEC8';
+			document.querySelector('#night_day').value ='day';
+		  }
+	}
+	function init() {
+
+		var val = localStorage.Theme;
+		if(val ==='night'){
+			document.querySelector('body').style.backgroundColor ='black';
+			document.querySelector('body').style.color ='white';
+			document.querySelector('#night_day').value ='blue';
+
+		  } else if(val ==='day') {
+			document.querySelector('body').style.backgroundColor ='white';
+			document.querySelector('body').style.color ='black';
+			document.querySelector('#night_day').value ='배경 On';
+
+		  }
+		 else {
+			document.querySelector('body').style.backgroundColor ='#81F7F3';
+			document.querySelector('body').style.color ='#2EFEC8';
+			document.querySelector('#night_day').value ='day';
+
+		  }
+	}
+	</script>
+</body>
+</html>
