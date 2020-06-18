@@ -32,7 +32,7 @@
 		function back() {
 			if(document.querySelector('#night_day').value ==='night'){
 				document.querySelector('body').style.backgroundColor ='black';
-				document.querySelector('g').style.color ='white';
+				document.getElementById('g').style.color ='white';
 				document.querySelector('#night_day').value ='blue';
 				localStorage.Theme = "night";
 				var links = document.querySelectorAll('a');
@@ -43,7 +43,7 @@
 				}
 			  } else if(document.querySelector('#night_day').value ==='day') {
 				document.querySelector('body').style.backgroundColor ='white';
-				document.querySelector('g').style.color ='black';
+				document.getElementById('g').style.color ='black';
 				document.querySelector('#night_day').value ='night';
 				  localStorage.Theme = "day";
 				var links = document.querySelectorAll('a');
@@ -54,7 +54,7 @@
 				}
 			  } else if(document.querySelector('#night_day').value ==='배경 On'){
 				document.querySelector('body').style.backgroundColor ='black';
-				document.querySelector('g').style.color ='white';
+				document.getElementById('g').style.color ='white';
 				document.querySelector('#night_day').value ='blue';
 				localStorage.Theme = "night";
 				var links = document.querySelectorAll('a');
@@ -67,7 +67,7 @@
 			 else {
 				document.querySelector('body').style.backgroundColor ='#81F7F3';
 				 localStorage.Theme = "blue";
-				document.querySelector('g').style.color ='black';
+				document.getElementById('g').style.color ='black';
 				document.querySelector('#night_day').value ='day';
 
 				var links = document.querySelectorAll('a');
@@ -83,7 +83,7 @@
 			var val = localStorage.Theme;
 			if(val ==='night'){
 				document.querySelector('body').style.backgroundColor ='black';
-				document.querySelector('g').style.color ='white';
+				document.getElementById('g').style.color ='white';
 				document.querySelector('#night_day').value ='blue';
 				var links = document.querySelectorAll('a');
 				var i = 0;
@@ -93,7 +93,7 @@
 				}
 			  } else if(val ==='day') {
 				document.querySelector('body').style.backgroundColor ='white';
-				document.querySelector('g').style.color ='black';
+				document.getElementById('g').style.color ='black';
 				document.querySelector('#night_day').value ='배경 On';
 				var links = document.querySelectorAll('a');
 				var i = 0;
@@ -104,7 +104,7 @@
 			  }
 			 else {
 				document.querySelector('body').style.backgroundColor ='#81F7F3';
-				document.querySelector('g').style.color ='black';
+				document.getElementById('g').style.color ='black';
 				document.querySelector('#night_day').value ='day';
 				var links = document.querySelectorAll('a');
 				var i = 0;
