@@ -1,35 +1,30 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>Coogle</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/4bea434f10.js" crossorigin="anonymous"></script>
-    <style type="text/css"> .no-drag {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;} </style>
+ <html lang="ko">
+ <head>
+      <meta charset="UTF-8">
+      <title>Coogle</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" type="image/x-icon" href="%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <script src="https://kit.fontawesome.com/4bea434f10.js" crossorigin="anonymous"></script>
+     <style type="text/css"> .no-drag {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;} </style>
 
 
 </head>
-<body onload="init()">
+<body onload="init()" style="text-align: center;">
   <ul>
-    <li><a href="moa.html" style="text-decoration:none">Search</a></li>
+    <li><a class="active" href="moa.html" style="text-decoration:none">Search</a></li>
    <li><a href="info.html" style="text-decoration:none">+More</a></li>
-   <li><a class="active" href="#" style="text-decoration: none;">google</a></li>
  </ul>
 
     <h1 class="no-drag"><span>C</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></h1>
-    <form action="https://www.google.com/search?q=" method="get">
-        <div class="mx-auto search-bar input-group mb-3 rounded-pill" style="width: 58vw;">
-            <input name="q" type="text" class="form-control" placeholder="검색어를 입력하세요" aria-label="검색어를 입력하세요" aria-describedby="button-addon2">
-            <div class="input-group-append">
-                <!--<button type="button" id="" class="btn btnEvent"><img src="search.png" alt="btnImages" class="btnImages" width="30px" height="30px">
-                </button>-->
-                <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="fas fa-search"></i></button>
-            </div>
-        </div>
-    </form>
+    <table style="margin: 15px auto;list-style:none;line-height:30px;border-spacing:16px;">
+      <tr><td><a href="index.html" style="text-decoration: none;">Google</a></td><td style="width:15px;"></td><td><a href="daum.html" style="text-decoration: none;">Daum</a></td></tr>
+      <tr><td><a href="naver.html" style="text-decoration: none;">Naver</a></td><td style="width:15px;"></td><td><a href="youtube.html" style="text-decoration: none;">Youtube</a></td></tr>
+      <tr><td><a href="image.html" style="text-decoration: none;">Image</a></td><td style="width:15px;"></td><td><a href="wiki.html" style="text-decoration: none;">wiki</a></td></tr>
+      <tr><td><a href="melon.html" style="text-decoration: none;">Music</a></td><td style="width:15px;"></td><td><a href="facebook.html" style="text-decoration: none;">Sns</a></td></tr>
+    </table>
     <div style="position: fixed; bottom: 15px; right: 15px">
     	<input type="button" class="btn btn-outline-info" onclick="back()" id = 'night_day' value = '배경 On'>
     </div>
