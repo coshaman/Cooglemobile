@@ -14,11 +14,11 @@
 </head>
 <body onload="init()" style="text-align: center;">
   <ul>
-    <li><a class="active" href="moa.html" style="text-decoration:none">Search</a></li>
+   <li><a class="active" href="moa.html" style="text-decoration:none">Search</a></li>
    <li><a href="info.html" style="text-decoration:none">+More</a></li>
  </ul>
 
-    <h1 class="no-drag"><span>C</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></h1>
+    <h1 class="no-drag" id="g"><span>C</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></h1>
     <table style="margin: 15px auto;list-style:none;line-height:30px;border-spacing:16px;">
       <tr><td><a href="index.html" style="text-decoration: none;">Google</a></td><td style="width:15px;"></td><td><a href="daum.html" style="text-decoration: none;">Daum</a></td></tr>
       <tr><td><a href="naver.html" style="text-decoration: none;">Naver</a></td><td style="width:15px;"></td><td><a href="youtube.html" style="text-decoration: none;">Youtube</a></td></tr>
@@ -32,7 +32,7 @@
 		function back() {
 			if(document.querySelector('#night_day').value ==='night'){
 				document.querySelector('body').style.backgroundColor ='black';
-				document.querySelector('body').style.color ='white';
+				document.querySelector('g').style.color ='white';
 				document.querySelector('#night_day').value ='blue';
 				localStorage.Theme = "night";
 				var links = document.querySelectorAll('a');
@@ -43,7 +43,7 @@
 				}
 			  } else if(document.querySelector('#night_day').value ==='day') {
 				document.querySelector('body').style.backgroundColor ='white';
-				document.querySelector('body').style.color ='black';
+				document.querySelector('g').style.color ='black';
 				document.querySelector('#night_day').value ='night';
 				  localStorage.Theme = "day";
 				var links = document.querySelectorAll('a');
@@ -54,7 +54,7 @@
 				}
 			  } else if(document.querySelector('#night_day').value ==='배경 On'){
 				document.querySelector('body').style.backgroundColor ='black';
-				document.querySelector('body').style.color ='white';
+				document.querySelector('g').style.color ='white';
 				document.querySelector('#night_day').value ='blue';
 				localStorage.Theme = "night";
 				var links = document.querySelectorAll('a');
@@ -67,7 +67,7 @@
 			 else {
 				document.querySelector('body').style.backgroundColor ='#81F7F3';
 				 localStorage.Theme = "blue";
-				document.querySelector('body').style.color ='black';
+				document.querySelector('g').style.color ='black';
 				document.querySelector('#night_day').value ='day';
 
 				var links = document.querySelectorAll('a');
@@ -83,7 +83,7 @@
 			var val = localStorage.Theme;
 			if(val ==='night'){
 				document.querySelector('body').style.backgroundColor ='black';
-				document.querySelector('body').style.color ='white';
+				document.querySelector('g').style.color ='white';
 				document.querySelector('#night_day').value ='blue';
 				var links = document.querySelectorAll('a');
 				var i = 0;
@@ -93,7 +93,7 @@
 				}
 			  } else if(val ==='day') {
 				document.querySelector('body').style.backgroundColor ='white';
-				document.querySelector('body').style.color ='black';
+				document.querySelector('g').style.color ='black';
 				document.querySelector('#night_day').value ='배경 On';
 				var links = document.querySelectorAll('a');
 				var i = 0;
@@ -104,7 +104,7 @@
 			  }
 			 else {
 				document.querySelector('body').style.backgroundColor ='#81F7F3';
-				document.querySelector('body').style.color ='black';
+				document.querySelector('g').style.color ='black';
 				document.querySelector('#night_day').value ='day';
 				var links = document.querySelectorAll('a');
 				var i = 0;
